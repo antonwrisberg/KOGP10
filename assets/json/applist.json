@@ -70,5 +70,53 @@
 		"name": "LoopPay",
 		"description": "Den säkra mobila plånboken. Lämna bankkorten hemma och betala med telefonen!",
 		"image": "assets/img/looppay.jpg"
+	},
+	{
+		"id": 12,
+		"name": "Filmstaden",
+		"description": "Gillar du att gå på bio? Filmstaden AB är en av Sveriges ledande leverantörer av kultur och nöje med ca 12 miljoner biobesök per år",
+		"image": "assets/img/filmstaden.jpg"
+	},
+	{
+		"id": 13,
+		"name": "Skånetrafiken",
+		"description": "Skånetrafikens uppgifter innefattar planering, upphandling och marknadsföring av kollektivtrafik i Skåne län.",
+		"image": "assets/img/skanetrafiken.jpg"
+	},
+	{
+		"id": 14,
+		"name": "Snapchat",
+		"description": "Snapchat är en fotodelnings- och multimediaapp för smartphones. Användare kan ta bilder eller spela in videoklipp och sedan lägga på filter, stickers, text eller rita på dem. ",
+		"image": "assets/img/snapchat.jpg"
+	},
+	{
+		"id": 15,
+		"name": "Spotify",
+		"description": "Spotify låter dig lyssna på musik på datorn, mobilen och surfplattan. Sök efter spår, artister eller album och lyssna gratis. Skapa och dela spellistor. Skapa din största och bästa musiksamling någonsin.",
+		"image": "assets/img/spotify.jpg"
+	},
+	{
+		"id": 16,
+		"name": "Tinder",
+		"description": "Tinder är en dejtingapp, likväl som världens hittills mest populära app för att möta nya människor. Tinder finns där dig som vill träffa nya människor, utöka ditt sociala nätverk eller träffa folk när du är ute och reser.",
+		"image": "assets/img/tinder.jpg"
+	},
+	{
+		"id": 17,
+		"name": "TripAdvisor",
+		"description": "TripAdvisor hjälper dig som planerar att resa. På TripAdvisor finns miljoner recensioner och foton för resor, guidade turer och attraktioner, restauranger med mera.",
+		"image": "assets/img/tripadvisor.jpg"
+	},
+	{
+		"id": 18,
+		"name": "Über",
+		"description": "Uber är en samåkningsapp för snabb, pålitlig skjuts inom några minuter – dag som natt. Tänk inte på att parkera eller vänta på en buss eller taxi. Med Uber klickar du bara för att beställa en resa – och det är lätt att betala med kort eller kontanter i utvalda städer.",
+		"image": "assets/img/uber.jpg"
+	},
+	{
+		"id": 19,
+		"name": "Wordfeud",
+		"description": "Wordfeud är ett pusselspel med stöd för flera spelare där du kan utmana vänner och slumpmässigt utvalda motståndare i upp till 30 separata matcher samtidigt!",
+		"image": "assets/img/wordfeud.jpg"
 	}
 ]
