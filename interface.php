@@ -2,34 +2,33 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<title>F&U HiFi ProtoType</title>
+		<title>Smarta Kartor prototyp</title>
 		<meta charset="utf-8" />
 	</head>
 	<body>
 		<div class="overlay" id="overlay-load">
-			<h1>Loading …</h1>
-			<h1>If this page persists, you may have been through all of the apps. <a href="index.php">Click here</a> to start over.</h1>
-			<h1>If you are unsure whether you have not been through all apps, try reloading the page.</h1>
+			<h1>Laddar ...</h1>
+			<h1>Om denna text visas i mer än 10 sekunder, ladda då om hemsidan</h1>
 		</div>
 		<div class="overlay hidden" id="overlay-correct">
-			<h1>Correct</h1>
-			<h1>Loading next app…</h1>
+			<h1>Rätt svar</h1>
+			<h1>Laddar in nästa tjänst…</h1>
 		</div>
 		<div class="overlay hidden" id="overlay-info">
-			<h1>Help / Instructions</h1>
-			<p>Instructions go here …</p>
+		<h2>Instruktioner: </h2>
+		<p>Detta testet går ut på att hitta vilka kategorier som hör ihop med vilka tjänster. När testet startar kommer du att få en tjänst och får sedan i uppgift att klicka på vilken kategori som denna tjänst tillhör. I en del av testet kommer kategorierna stå i textform och ha olika teman så som Underhållning eller Hälsa. I den andra delen av testet kommer kategorierna ej vara i text eller beröra något tema. Du kommer istället bli presenterad ett antal kartor som föreställer olika platser av olika storlekar så som en planritning av ett hem eller en karta över världen. Din uppgift blir då att fundera i linje med “Var hör denna tjänsten hemma”? Sedan ska du välja den karta som du tycker bäst passar ihop med den tjänsten som du har givits.</P>
 			<p><a href="#" class="close">(close)</a></p>
 		</div>
 		<div class="container">
 			<div>
-				<h1>Find the app</h1>
+				<h1>Hitta rätt kategori/karta för tjänsten!</h1>
 				<img class="app-image" src="">
 				<h1 class="app-name"></h1>
 				<p class="app-description"></p>
 			</div>
 			<div>
 			<?php if ($_GET["version"] == "category") : ?>
-				<h1>In what category do you expect to find the app?</h1>
+				<h1>I vilken kategori förväntar du dig att hitta tjänsten?</h1>
 				<button data-target-id="1">Handla</button>
 				<button data-target-id="2">Hem/Vardag</button>
 				<button data-target-id="3">Transport/Resor</button>
@@ -37,7 +36,7 @@
 				<button data-target-id="5">Träning & Hälsa</button>
 				<button data-target-id="6">Underhållning</button>
 			<?php elseif ($_GET["version"] == "map") : ?>
-				<h1>Where does the app live?</h1>
+				<h1>I vilken karta hör tycker du tjänsten hör hemma?</h1>
 				<button data-target-id="1">
 					<img src="assets/img/layer0.png">
 				</button>
@@ -59,7 +58,7 @@
 			<?php endif; ?>
 			</div>
 		</div>
-		<p class="footer"><a href="#" class="info">Help / instructions</a></p>
+		<p class="footer"><a href="#" class="info">Hjälp</a></p>
 
 		<script
 		  src="https://code.jquery.com/jquery-3.3.1.min.js"
