@@ -47,9 +47,22 @@ p {
 	opacity: .8;
 }
 
+
+table,
+tr,
+td {
+	border: 1px black solid;
+}
+
 .intro-text {
 	width: 50%;
 	margin: auto;
+}
+
+.table-style {
+	width: 40%;
+	margin: auto;
+	opacity: 1 !important;
 }
 
 .app-description {
