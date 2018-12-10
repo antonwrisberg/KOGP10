@@ -41,7 +41,7 @@ p {
 button {
 	display: block;
 	width: 46%;
-	height: 60px;
+	padding: 10px;
 	background: blue;
 	color: white;
 	border: none;
@@ -54,6 +54,10 @@ button {
 button:hover {
 	cursor: pointer;
 	background: darkblue;
+}
+
+button img {
+	width: 100%;
 }
 
 .right,
