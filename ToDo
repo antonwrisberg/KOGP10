@@ -1,0 +1,9 @@
+ToDo
+- Reduce the amount of categories to 6
+- Increase the amount of maps to six
+- Add apps to app list json-file
+- Make statistics page
+- Add introduction screen
+- Translate interface to Swedish
+- Change index.php to introduction text and ONE start button automatically and randomly starting one of the tests
+- Update API to inform the interface if all apps are in exclude_array
