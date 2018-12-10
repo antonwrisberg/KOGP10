@@ -5,9 +5,9 @@
 		<title>Smarta Kartor prototyp</title>
 		<meta charset="utf-8" />
 	</head>
-	<body>
+	<body class="table-style">
 		<h1>Statistik för din omgång:</h1>
-        <table style="width:70%">
+        <table>
             <tr>
                 <th>Mätpunkt</th>
                 <th>Kategorier</th> 
@@ -19,176 +19,139 @@
                 <td>50%</td>
             </tr>
             <tr>
-                <td>Tid spenderad i respektive del av testet</td>
+                <td>Tid spenderad i <br> respektive del av testet</td>
                 <td>140 sekunder</td>
                 <td>120 sekunder</td>
             </tr>
         </table>
-        <h1>Generell statistik för testet:</h1>
-        <h2> Andel rätt på första försöket per tjänst (Kategorier) </h2>
-        <table style="width:20%">
+        <h2>Generell statistik för testet:</h2>
+        <table>
             <tr>
-                <td>Snapchat</td>
-                <td>50%</td>
+               <td>Tjänst</td>
+                <td >Andel rätt på första <br> försöket per tjänst (Kategorier) </td>
+                <td>Tjänst</td>
+                <td > Andel rätt på första <br> försöket per tjänst (Kartor) </td>
             </tr>
+        
             <tr>
                 <td>Snapchat</td>
                 <td>50%</td>
-            </tr>
-            <tr>
-                <td>Snapchat</td>
-                <td>50%</td>
-            </tr>
-            <tr>
-                <td>Snapchat</td>
-                <td>50%</td>
+                <td>Facebook</td>
+                <td>30%</td>
             </tr>
             <tr>
                 <td>Snapchat</td>
                 <td>50%</td>
+                <td>Facebook</td>
+                <td>30%</td>
             </tr>
             <tr>
                 <td>Snapchat</td>
                 <td>50%</td>
+                <td>Facebook</td>
+                <td>30%</td>
             </tr>
             <tr>
                 <td>Snapchat</td>
                 <td>50%</td>
+                <td>Facebook</td>
+                <td>30%</td>
             </tr>
             <tr>
                 <td>Snapchat</td>
                 <td>50%</td>
+                <td>Facebook</td>
+                <td>30%</td>
             </tr>
             <tr>
                 <td>Snapchat</td>
                 <td>50%</td>
+                <td>Facebook</td>
+                <td>30%</td>
             </tr>
             <tr>
                 <td>Snapchat</td>
                 <td>50%</td>
+                <td>Facebook</td>
+                <td>30%</td>
             </tr>
             <tr>
                 <td>Snapchat</td>
                 <td>50%</td>
+                <td>Facebook</td>
+                <td>30%</td>
             </tr>
             <tr>
                 <td>Snapchat</td>
                 <td>50%</td>
+                <td>Facebook</td>
+                <td>30%</td>
             </tr>
             <tr>
                 <td>Snapchat</td>
                 <td>50%</td>
+                <td>Facebook</td>
+                <td>30%</td>
             </tr>
             <tr>
                 <td>Snapchat</td>
                 <td>50%</td>
+                <td>Facebook</td>
+                <td>30%</td>
             </tr>
             <tr>
                 <td>Snapchat</td>
                 <td>50%</td>
+                <td>Facebook</td>
+                <td>30%</td>
             </tr>
             <tr>
                 <td>Snapchat</td>
                 <td>50%</td>
+                <td>Facebook</td>
+                <td>30%</td>
             </tr>
             <tr>
                 <td>Snapchat</td>
                 <td>50%</td>
+                <td>Facebook</td>
+                <td>30%</td>
             </tr>
             <tr>
                 <td>Snapchat</td>
                 <td>50%</td>
+                <td>Facebook</td>
+                <td>30%</td>
             </tr>
             <tr>
                 <td>Snapchat</td>
                 <td>50%</td>
+                <td>Facebook</td>
+                <td>30%</td>
             </tr>
             <tr>
                 <td>Snapchat</td>
                 <td>50%</td>
-            </tr>
-        </table>
-        <h1> Andel rätt på första försöket per tjänst (Kartor)
-        <table style="width:40%">
-            <tr>
                 <td>Facebook</td>
-                <td>50%</td>
+                <td>30%</td>
             </tr>
             <tr>
-                <td>Facebook</td>
+                <td>Snapchat</td>
                 <td>50%</td>
+                <td>Facebook</td>
+                <td>30%</td>
             </tr>
             <tr>
-                <td>Facebook</td>
+                <td>Snapchat</td>
                 <td>50%</td>
+                <td>Facebook</td>
+                <td>30%</td>
             </tr>
             <tr>
-                <td>Facebook</td>
+                <td>Snapchat</td>
                 <td>50%</td>
-            </tr>
-            <tr>
                 <td>Facebook</td>
-                <td>50%</td>
-            </tr>
-            <tr>
-                <td>Facebook</td>
-                <td>50%</td>
-            </tr>
-            <tr>
-                <td>Facebook</td>
-                <td>50%</td>
-            </tr>
-            <tr>
-                <td>Facebook</td>
-                <td>50%</td>
-            </tr>
-            <tr>
-                <td>Facebook</td>
-                <td>50%</td>
-            </tr>
-            <tr>
-                <td>Facebook</td>
-                <td>50%</td>
-            </tr>
-            <tr>
-                <td>Facebook</td>
-                <td>50%</td>
-            </tr>
-            <tr>
-                <td>Facebook</td>
-                <td>50%</td>
-            </tr>
-            <tr>
-                <td>Facebook</td>
-                <td>50%</td>
-            </tr>
-            <tr>
-                <td>Facebook</td>
-                <td>50%</td>
-            </tr>
-            <tr>
-                <td>Facebook</td>
-                <td>50%</td>
-            </tr>
-            <tr>
-                <td>Facebook</td>
-                <td>50%</td>
-            </tr>
-            <tr>
-                <td>Facebook</td>
-                <td>50%</td>
-            </tr>
-            <tr>
-                <td>Facebook</td>
-                <td>50%</td>
-            </tr>
-            <tr>
-                <td>Facebook</td>
-                <td>50%</td>
-            </tr>
-            <tr>
-                <td>Facebook</td>
-                <td>50%</td>
+                <td>30%</td>
             </tr>
         </table>
 	</body>
