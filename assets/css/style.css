@@ -43,6 +43,15 @@ a:visited {
 	margin-top: 0;
 }
 
+p {
+	opacity: .8;
+}
+
+.intro-text {
+	width: 50%;
+	margin: auto;
+}
+
 .app-description {
 	font-style: italic;
 }
