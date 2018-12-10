@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<title>Smarta kartor prototyp</title>
+		<title>Smarta Kartor prototyp</title>
 		<meta charset="utf-8" />
 	</head>
 	<body class="intro-text">
