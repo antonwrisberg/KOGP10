@@ -6,10 +6,19 @@
 		<meta charset="utf-8" />
 	</head>
 	<body>
-		<div id="overlay">
+		<div class="overlay" id="overlay-load">
 			<h1>Loading …</h1>
 			<h1>If this page persists, you may have been through all of the apps. <a href="index.php">Click here</a> to start over.</h1>
 			<h1>If you are unsure whether you have not been through all apps, try reloading the page.</h1>
+		</div>
+		<div class="overlay hidden" id="overlay-correct">
+			<h1>Correct</h1>
+			<h1>Loading next app…</h1>
+		</div>
+		<div class="overlay hidden" id="overlay-info">
+			<h1>Help / Instructions</h1>
+			<p>Instructions go here …</p>
+			<p><a href="#" class="close">(close)</a></p>
 		</div>
 		<div class="container">
 			<div>
@@ -19,21 +28,39 @@
 				<p class="app-description"></p>
 			</div>
 			<div>
-				<?php if ($_GET["version"] == "category") : ?>
+			<?php if ($_GET["version"] == "category") : ?>
 				<h1>In what category do you expect to find the app?</h1>
 				<button data-target-id="1">Handla</button>
 				<button data-target-id="2">Hem/Vardag</button>
-				<button data-target-id="3">Resor</button>
+				<button data-target-id="3">Transport/Resor</button>
 				<button data-target-id="4">Socialt</button>
 				<button data-target-id="5">Träning & Hälsa</button>
-				<button data-target-id="6">Transport</button>
-				<button data-target-id="7">Underhållning</button>
-				<?php endif; ?>
+				<button data-target-id="6">Underhållning</button>
+			<?php elseif ($_GET["version"] == "map") : ?>
+				<h1>Where does the app live?</h1>
+				<button data-target-id="1">
+					<img src="[Insert in bild 1 här: Richard]">
+				</button>
+				<button data-target-id="2">
+					<img src="[Insert in bild 2 här: Richard]">
+				</button>
+				<button data-target-id="3">
+					<img src="[Insert in bild 3 här: Richard]">
+				</button>
+				<button data-target-id="4">
+					<img src="[Insert in bild 4 här: Richard]">
+				</button>
+				<button data-target-id="5">
+					<img src="[Insert in bild 5 här: Richard]">
+				</button>
+				<button data-target-id="6">
+					<img src="[Insert in bild 6 här: Richard]">
+				</button>
+			<?php endif; ?>
 			</div>
 		</div>
-		
-<!-- 		<p class="footer">Reload the page to reset statistics</p> -->
-		
+		<p class="footer"><a href="#" class="info">Help / instructions</a></p>
+
 		<script
 		  src="https://code.jquery.com/jquery-3.3.1.min.js"
 		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
