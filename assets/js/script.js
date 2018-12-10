@@ -13,6 +13,7 @@ $(document).ready(function() {
 	// Function to initiate interface
 	function initiate() {
 		$('#overlay-load').removeClass('hidden');
+		$('#overlay-correct').addClass('hidden');
 		$('button').removeClass('right').removeClass('wrong');
 		attempt = 0;
 
@@ -67,6 +68,7 @@ $(document).ready(function() {
 
 			$(this).addClass('right');
 
+			$('#overlay-correct').removeClass('hidden');
 			setTimeout(initiate, 1000);
 		} else {
 			$(this).addClass('wrong');

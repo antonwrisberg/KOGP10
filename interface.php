@@ -11,6 +11,10 @@
 			<h1>If this page persists, you may have been through all of the apps. <a href="index.php">Click here</a> to start over.</h1>
 			<h1>If you are unsure whether you have not been through all apps, try reloading the page.</h1>
 		</div>
+		<div class="overlay hidden" id="overlay-correct">
+			<h1>Correct</h1>
+			<h1>Loading next app…</h1>
+		</div>
 		<div class="overlay hidden" id="overlay-info">
 			<h1>Help / Instructions</h1>
 			<p>Instructions go here …</p>

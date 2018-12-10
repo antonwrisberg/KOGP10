@@ -12,7 +12,6 @@ body {
 }
 
 p {
-	font-style: italic;
 	opacity: .6;
 }
 
@@ -31,12 +30,12 @@ a:visited {
 	display: grid;
 	width: 100%;
 	min-height: 90%;
-	grid-template-columns: 50% 50%;
+	grid-template-columns: 30% 70%;
 	margin: auto;
 }
 
 .container div {
-	width: 60%;
+	width: 90%;
 	margin: auto;
 }
 
@@ -44,9 +43,13 @@ a:visited {
 	margin-top: 0;
 }
 
+.app-description {
+	font-style: italic;
+}
+
 button {
 	display: block;
-	width: 46%;
+	width: 31.33%;
 	padding: 10px;
 	background: blue;
 	color: white;
@@ -54,7 +57,7 @@ button {
 	border-radius: 0;
 	font-size: 1.5em;
 	float: left;
-	margin: auto 2% 30px;
+	margin: auto 1% 30px;
 }
 
 button:hover {
