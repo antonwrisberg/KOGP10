@@ -11,21 +11,31 @@ body {
 	text-align: center;
 }
 
-.container {
-	display: grid;
-	width: 100%;
-	min-height: 90%;
-	grid-template-columns: 50% 50%;
-	margin: auto;
-}
-
-.container div {
-	width: 60%;
-	margin: auto;
+p {
+	opacity: .6;
 }
 
 img {
 	width: 80%;
+	margin: auto;
+}
+
+a,
+a:hover,
+a:visited {
+	color: inherit;
+}
+
+.container {
+	display: grid;
+	width: 100%;
+	min-height: 90%;
+	grid-template-columns: 30% 70%;
+	margin: auto;
+}
+
+.container div {
+	width: 90%;
 	margin: auto;
 }
 
@@ -42,22 +52,30 @@ p {
 	margin: auto;
 }
 
+.app-description {
+	font-style: italic;
+}
+
 button {
 	display: block;
-	width: 46%;
-	height: 60px;
+	width: 31.33%;
+	padding: 10px;
 	background: blue;
 	color: white;
 	border: none;
 	border-radius: 0;
 	font-size: 1.5em;
 	float: left;
-	margin: auto 2% 30px;
+	margin: auto 1% 30px;
 }
 
 button:hover {
 	cursor: pointer;
 	background: darkblue;
+}
+
+button img {
+	width: 100%;
 }
 
 .right,
@@ -77,7 +95,7 @@ button:hover {
 	font-size: .7em;
 }
 
-#overlay {
+.overlay {
 	position: fixed;
 	top: 0;
 	bottom: 0;
