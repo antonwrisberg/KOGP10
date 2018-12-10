@@ -6,10 +6,15 @@
 		<meta charset="utf-8" />
 	</head>
 	<body>
-		<div id="overlay">
+		<div class="overlay" id="overlay-load">
 			<h1>Loading …</h1>
 			<h1>If this page persists, you may have been through all of the apps. <a href="index.php">Click here</a> to start over.</h1>
 			<h1>If you are unsure whether you have not been through all apps, try reloading the page.</h1>
+		</div>
+		<div class="overlay hidden" id="overlay-info">
+			<h1>Help / Instructions</h1>
+			<p>Instructions go here …</p>
+			<p><a href="#" class="close">(close)</a></p>
 		</div>
 		<div class="container">
 			<div>
@@ -50,8 +55,7 @@
 			<?php endif; ?>
 			</div>
 		</div>
-
-<!-- 		<p class="footer">Reload the page to reset statistics</p> -->
+		<p class="footer"><a href="#" class="info">Help / instructions</a></p>
 
 		<script
 		  src="https://code.jquery.com/jquery-3.3.1.min.js"
