@@ -34,8 +34,12 @@ img {
 }
 
 p {
-	font-style: italic;
-	opacity: .6;
+	opacity: .8;
+}
+
+.intro-text {
+	width: 50%;
+	margin: auto;
 }
 
 button {
