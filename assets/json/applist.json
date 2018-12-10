@@ -3,72 +3,72 @@
 		"id": 0,
 		"name": "AirBnB",
 		"description": "En oförglömlig reseupplevelse börjar med Airbnb. Hitta äventyrsresor och nya ställen att besöka, både nära och fjärran. Få tillgång till lediga semesterlägenheter och nya upplevelser när du besöker platser runt om i världen. Boka hela din resa, eller börja tjäna pengar som värd.",
-		"image": ""
+		"image": "assets/img/airbnb.jpg"
 	},
 	{
 		"id": 1,
 		"name": "Blocket",
 		"description": "Blocket ger dig möjlighet att köpa och sälja begagnade saker snabbare och söka smartare efter fynd. På Blocket möts 5 miljoner användare varje vecka. Här köps och säljs alltifrån möbelklassiker och bilar till elektronik och märkeskläder i hela landet.",
-		"image": ""
+		"image": "assets/img/blocket.jpg"
 	},
 	{
 		"id": 2,
 		"name": "Facebook",
 		"description": "Nu går det snabbare än någonsin att se vad vännerna gör. Se vad dina vänner har för sig, dela uppdateringar, foton och video, bli meddelad när vänner gillar och kommenterar dina inlägg.",
-		"image": ""
+		"image": "assets/img/facebook.jpg"
 	},
 	{
 		"id": 3,
 		"name": "Actic",
 		"description": "Träning som ger dig resultat! Det här är din träningskompis. Det är ett verktyg som hjälper dig förbli motiverad, sätta mål samt uppmuntra dig hitta nya sätt att träna!",
-		"image": ""
+		"image": "assets/img/actic.jpg"
 	},
 	{
 		"id": 4,
 		"name": "Gmail - E-post från Google",
 		"description": "Med Gmail får du realtidsaviseringar, stöd för flera konton och sökning i alla e-postmeddelanden.",
-		"image": ""
+		"image": "assets/img/gmail.jpg"
 	},
 	{
 		"id": 5,
 		"name": "ICA",
 		"description": "Din lokala matbutik: Få enkel tillgång till erbjudanden och information för din ICA-butik. Välj bland massor av recept och lägg till ingredienserna direkt i din inköpslista. Spara favoriter och slumpa fram recept.",
-		"image": ""
+		"image": "assets/img/ICA.jpg"
 	},
 	{
 		"id": 6,
 		"name": "Kalender",
 		"description": "Håll koll på schemat och dela det med andra. Skapa separata kalendrar för hemmet, skolan, arbetet och allt möjligt.",
-		"image": ""
+		"image": "assets/img/kalender.jpg"
 	},
 	{
 		"id": 7,
 		"name": "KRY",
 		"description": "Trygg vård i mobilen. Våra legitimerade läkare finns till hands när vila och egenvård inte är tillräckligt. De kan hjälpa dig eller ditt barn med diagnos och behandling eller remiss till vidare vård, och kan även utfärda sjukintyg vid behov. KRY är en registrerad vårdgivare",
-		"image": ""
+		"image": "assets/img/kry.jpg"
 	},
 	{
 		"id": 8,
 		"name": "Lundahoj",
 		"description": "Hyr cykel i Lund! Ett miljövänligt och hälsosamt sätt att färdas på. Låna eller hyr en cykel vid någon av Lundahojs cykelstationer för att ta dig dit du vill.",
-		"image": ""
+		"image": "assets/img/lundahoj.png"
 	},
 	{
 		"id": 9,
 		"name": "MatHem",
 		"description": "Din matbutik på nätet. Beställ idag och få leverans redan imorgon. På MatHem hittar du tusentals garanterat fräscha varor och ett stort ekologiskt utbud.",
-		"image": ""
+		"image": "assets/img/mathem.png"
 	},
 	{
 		"id": 10,
 		"name": "Philips Hue",
 		"description": "Ge ditt smarta hem liv med världens mest intelligenta belysning. Styr din belysning på olika sätt med de smarta tillbehören. Philips Hue har ett brett sortiment smarta glödlampor, lampor, armaturer och tillbehör.",
-		"image": ""
+		"image": "assets/img/philips_hue.png"
 	},
 	{
 		"id": 11,
-		"name": "Samsung Pay",
-		"description": "Ge ditt smarta hem liv med världens mest intelligenta belysning. Styr din belysning på olika sätt med de smarta tillbehören. Philips Hue har ett brett sortiment smarta glödlampor, lampor, armaturer och tillbehör.",
-		"image": ""
+		"name": "LoopPay",
+		"description": "Den säkra mobila plånboken. Lämna bankkorten hemma och betala med telefonen!",
+		"image": "assets/img/looppay.jpg"
 	}
 ]
