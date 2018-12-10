@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<title>F&U HiFi ProtoType</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<div id="overlay">
+			<h1>Loading …</h1>
+			<h1>If this page persists, you may have been through all of the apps. <a href="index.php">Click here</a> to start over.</h1>
+			<h1>If you are unsure whether you have not been through all apps, try reloading the page.</h1>
+		</div>
+		<div class="container">
+			<div>
+				<h1>Find the app</h1>
+				<img class="app-image" src="">
+				<h1 class="app-name"></h1>
+				<p class="app-description"></p>
+			</div>
+			<div>
+				<?php if ($_GET["version"] == "category") : ?>
+				<h1>In what category do you expect to find the app?</h1>
+				<button data-target-id="1">Handla</button>
+				<button data-target-id="2">Hem/Vardag</button>
+				<button data-target-id="3">Resor</button>
+				<button data-target-id="4">Socialt</button>
+				<button data-target-id="5">Träning & Hälsa</button>
+				<button data-target-id="6">Transport</button>
+				<button data-target-id="7">Underhållning</button>
+				<?php endif; ?>
+			</div>
+		</div>
+		
+<!-- 		<p class="footer">Reload the page to reset statistics</p> -->
+		
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous"></script>
+		<script type="text/javascript" src="assets/js/script.js"></script>
+	</body>
+</html>
