@@ -50,6 +50,8 @@ function get_random_app($exclude_array = array()) {
 			}
 
 			return $return_array;
+		} else {
+			return array("error" => "no more apps");
 		}
 	}
 }
@@ -134,16 +136,3 @@ function api($get_data = array()) {
 	}
 }
 ?>
-<?php /*
-<pre>
-<?php //print_r(get_random_app()); ?>
-</pre>
-
-<pre>
-<?php //print_r(save_entry()); ?>
-</pre>
-*/ ?>
-
-
-
-/*testkommentar*/
