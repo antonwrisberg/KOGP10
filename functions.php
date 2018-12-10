@@ -12,6 +12,7 @@ function get_random_app($exclude_array = array()) {
 
 	foreach ($app_list as $app) {
 		if (!in_array($app["id"], $exclude_array)) {
+
 			global $link;
 			$return_array = $app;
 
@@ -20,16 +21,21 @@ function get_random_app($exclude_array = array()) {
 				  FROM `lucs_fu_entries`
 				 WHERE `target_type` = 'map'
 				 	&& `attempt` = 1
-				 	&& `app_id` = " . mysqli_real_escape_string($link, $app["id"]) . "
+				 	&& `app_id` = '" . mysqli_real_escape_string($link, $app["id"]) . "'
 				 GROUP BY `target_id`, `target_type`
 				 ORDER BY `count` DESC
 				 LIMIT 1
 			");
 
 			if ($result) {
-				$data = $result->fetch_array();
+				// Default in case of firts rating
+				$return_array["correctTargetId"]["map"] = 1;
 
-				$return_array["correctTargetId"]["map"] = $data["target_id"];
+				while($data = $result->fetch_array()) {
+					$return_array["correctTargetId"]["map"] = $data["target_id"];
+				}
+			} else {
+				return array("error" => $link->error);
 			}
 
 			$result = mysqli_query($link, "
@@ -37,23 +43,28 @@ function get_random_app($exclude_array = array()) {
 				  FROM `lucs_fu_entries`
 				 WHERE `target_type` = 'category'
 				 	&& `attempt` = 1
-				 	&& `app_id` = " . mysqli_real_escape_string($link, $app["id"]) . "
+				 	&& `app_id` = '" . mysqli_real_escape_string($link, $app["id"]) . "'
 				 GROUP BY `target_id`, `target_type`
 				 ORDER BY `count` DESC
 				 LIMIT 1
 			");
 
 			if ($result) {
-				$data = $result->fetch_array();
+				// Default in case of firts rating
+				$return_array["correctTargetId"]["category"] = 1;
 
-				$return_array["correctTargetId"]["category"] = $data["target_id"];
+				while($data = $result->fetch_array()) {
+					$return_array["correctTargetId"]["category"] = $data["target_id"];
+				}
+			} else {
+				return array("error" => $link->error);
 			}
 
 			return $return_array;
-		} else {
-			return array("error" => "no more apps");
 		}
 	}
+
+	return array("error" => "no more apps");
 }
 
 function save_entry($entry_data) {
