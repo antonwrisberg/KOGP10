@@ -1,16 +1,20 @@
 <?php
+// db.php is not included as it contains passwords.
+// It contains something similar to this:
+// $link = mysqli_connect("localhost", "user", "password", "database");
+
 include("db.php");
 
 function get_random_app($exclude_array = array()) {
 	$app_list = json_decode(file_get_contents("assets/json/applist.json"), true);
-	
+
 	shuffle($app_list);
-	
+
 	foreach ($app_list as $app) {
 		if (!in_array($app["id"], $exclude_array)) {
 			global $link;
 			$return_array = $app;
-			
+
 			$result = mysqli_query($link, "
 				SELECT COUNT(`id`) as 'count', `target_id`, `target_type`
 				  FROM `lucs_fu_entries`
@@ -21,13 +25,13 @@ function get_random_app($exclude_array = array()) {
 				 ORDER BY `count` DESC
 				 LIMIT 1
 			");
-			
+
 			if ($result) {
 				$data = $result->fetch_array();
-				
+
 				$return_array["correctTargetId"]["map"] = $data["target_id"];
 			}
-			
+
 			$result = mysqli_query($link, "
 				SELECT COUNT(`id`) as 'count', `target_id`, `target_type`
 				  FROM `lucs_fu_entries`
@@ -38,20 +42,20 @@ function get_random_app($exclude_array = array()) {
 				 ORDER BY `count` DESC
 				 LIMIT 1
 			");
-			
+
 			if ($result) {
 				$data = $result->fetch_array();
-				
+
 				$return_array["correctTargetId"]["category"] = $data["target_id"];
 			}
-			
+
 			return $return_array;
 		}
 	}
 }
 
 function save_entry($entry_data) {
-	
+
 	if (
 		!isset($entry_data["session_id"]) ||
 		!isset($entry_data["app_id"]) ||
@@ -64,7 +68,7 @@ function save_entry($entry_data) {
 	) {
 		return array("error" => "missing argument");
 	}
-	
+
 	global $link;
 
 	$result = mysqli_query(
@@ -89,7 +93,7 @@ function save_entry($entry_data) {
 			'" . mysqli_real_escape_string($link, $entry_data["is_training"]) . "'
 		)"
 	);
-	
+
 	if ($result) {
 		return true;
 	} else {
@@ -108,7 +112,7 @@ function api($get_data = array()) {
 				}
 				return get_random_app($exclude);
 				break;
-			
+
 			case "save_entry":
 				return save_entry(array(
 					"session_id" => $get_data["session_id"],
