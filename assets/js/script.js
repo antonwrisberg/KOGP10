@@ -3,7 +3,7 @@ $(document).ready(function() {
 	$.urlParam = function(name){
 		var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
 
-		if (results==null) {
+		if (results == null) {
 			return null;
 		}
 
@@ -25,17 +25,27 @@ $(document).ready(function() {
 			}
 		})
 		.done(function(data) {
-			$('.app-name').text(data.name);
-			$('.app-description').text(data.description);
-			$('.app-image').attr('src', '');
-			$('.app-image').attr('src', data.image);
-			$('#overlay-load').addClass('hidden');
+			if (!data.error) {
+				$('.app-name').text(data.name);
+				$('.app-description').text(data.description);
+				$('.app-image').attr('src', '');
+				$('.app-image').attr('src', data.image);
+				$('#overlay-load').addClass('hidden');
 
-			correctTargetId = data.correctTargetId[$.urlParam('version')];
-			appId = data.id;
-			timeStart = new Date().getTime();
+				correctTargetId = data.correctTargetId[$.urlParam('version')];
+				appId = data.id;
+				timeStart = new Date().getTime();
 
-			console.log(data);
+				console.log(data);
+			} else if (data.error == 'no more apps') {
+				console.log(data.error);
+				if ($.urlParam('cycle') == 'initial') {
+					window.location.href = 'interface.php?session_id=' + $.urlParam('session_id') + '&version=' + ($.urlParam('version') == 'category' ? 'map' : 'category');
+					//console.log("I want to redirect you!");
+				} else {
+					window.location.href = 'success.php?session_id=' + $.urlParam('session_id');
+				}
+			}
 		});
 	}
 
@@ -64,7 +74,7 @@ $(document).ready(function() {
 
 		if ($(this).data('targetId') == correctTargetId) {
 			exclude.push(appId);
-			window.history.pushState("object or string", "Title", '?session_id=' + $.urlParam('session_id') + '&version=' + $.urlParam('version') + '&exclude=' + exclude.join());
+			window.history.pushState("object or string", "Title", '?session_id=' + $.urlParam('session_id') + '&version=' + $.urlParam('version') + '&cycle=' + $.urlParam('cycle') + '&exclude=' + exclude.join());
 
 			$(this).addClass('right');
 

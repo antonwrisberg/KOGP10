@@ -36,7 +36,7 @@
 				<button data-target-id="5">Träning & Hälsa</button>
 				<button data-target-id="6">Underhållning</button>
 			<?php elseif ($_GET["version"] == "map") : ?>
-				<h1>I vilken karta hör tycker du tjänsten hör hemma?</h1>
+				<h1>På vilken karta tycker du tjänsten hör hemma?</h1>
 				<button data-target-id="1">
 					<img src="assets/img/layer0.png">
 				</button>
