@@ -39,22 +39,22 @@
 			<?php elseif ($_GET["version"] == "map") : ?>
 				<h1>Where does the app live?</h1>
 				<button data-target-id="1">
-					<img src="[Insert in bild 1 här: Richard]">
+					<img src="assets/img/layer0.png">
 				</button>
 				<button data-target-id="2">
-					<img src="[Insert in bild 2 här: Richard]">
+					<img src="assets/img/layer1.png">
 				</button>
 				<button data-target-id="3">
-					<img src="[Insert in bild 3 här: Richard]">
+					<img src="assets/img/layer2.png">
 				</button>
 				<button data-target-id="4">
-					<img src="[Insert in bild 4 här: Richard]">
+					<img src="assets/img/layer3.png">
 				</button>
 				<button data-target-id="5">
-					<img src="[Insert in bild 5 här: Richard]">
+					<img src="assets/img/layer4.png">
 				</button>
 				<button data-target-id="6">
-					<img src="[Insert in bild 6 här: Richard]">
+					<img src="assets/img/layer5.png">
 				</button>
 			<?php endif; ?>
 			</div>
