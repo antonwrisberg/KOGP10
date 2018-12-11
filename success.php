@@ -91,6 +91,26 @@
 <?php
 $app_list = json_decode(file_get_contents("assets/json/applist.json"), true);
 
+$sum = array(
+	"count" => 0,
+	"first_attempt" => array(
+		"category" => 0,
+		"map" => 0
+	),
+	"total" => array(
+		"category" => 0,
+		"map" => 0
+	),
+	"avg_attempt" => array(
+		"category" => 0,
+		"map" => 0
+	),
+	"time_spent" => array(
+		"category" => 0,
+		"map" => 0
+	)
+);
+
 foreach ($app_list as $app) :
 	$result = mysqli_query($link, "
 	SELECT 'first_attempt' as 'count_type', COUNT(`id`) as 'count', `target_type`
@@ -134,6 +154,16 @@ UNION
 		if (!isset($result_array["first_attempt"]["map"])) {
 			$result_array["first_attempt"]["map"] = 0;
 		}
+
+		$sum["count"] ++;
+		$sum["first_attempt"]["category"] += (isset($result_array["first_attempt"]["category"]) ? $result_array["first_attempt"]["category"] : 0);
+		$sum["first_attempt"]["map"] += (isset($result_array["first_attempt"]["map"]) ? $result_array["first_attempt"]["map"] : 0);
+		$sum["total"]["category"] += (isset($result_array["total"]["category"]) ? $result_array["total"]["category"] : 0);
+		$sum["total"]["map"] += (isset($result_array["total"]["map"]) ? $result_array["total"]["map"] : 0);
+		$sum["avg_attempt"]["category"] += (isset($result_array["avg_attempt"]["category"]) ? $result_array["avg_attempt"]["category"] : 0);
+		$sum["avg_attempt"]["map"] += (isset($result_array["avg_attempt"]["map"]) ? $result_array["avg_attempt"]["map"] : 0);
+		$sum["time_spent"]["category"] += (isset($result_array["time_spent"]["category"]) ? $result_array["time_spent"]["category"] : 0);
+		$sum["time_spent"]["map"] += (isset($result_array["time_spent"]["map"]) ? $result_array["time_spent"]["map"] : 0);
 	}
 ?>
             <tr>
@@ -142,10 +172,19 @@ UNION
 							<td><?php echo (isset($result_array["total"]["map"]) ? round($result_array["first_attempt"]["map"] / $result_array["total"]["map"] * 100, 2) . "%" : "N/A"); ?></td>
 							<td><?php echo (isset($result_array["avg_attempt"]["category"]) ? $result_array["avg_attempt"]["category"] : "N/A"); ?></td>
 							<td><?php echo (isset($result_array["avg_attempt"]["map"]) ? $result_array["avg_attempt"]["map"] : "N/A"); ?></td>
-							<td><?php echo (isset($result_array["time_spent"]["category"]) ? round($result_array["time_spent"]["category"] / 1000, 0) : "N/A"); ?></td>
-							<td><?php echo (isset($result_array["time_spent"]["map"]) ? round($result_array["time_spent"]["map"] / 1000, 0) : "N/A"); ?></td>
+							<td><?php echo (isset($result_array["time_spent"]["category"]) ? round($result_array["time_spent"]["category"] / 1000, 1) : "N/A"); ?></td>
+							<td><?php echo (isset($result_array["time_spent"]["map"]) ? round($result_array["time_spent"]["map"] / 1000, 1) : "N/A"); ?></td>
             </tr>
 <?php endforeach; ?>
+<tr style="font-style:italic;font-weight:bold;opacity:.6">
+	<td>Genomsnitt</td>
+	<td><?php echo round($sum["first_attempt"]["category"] / $sum["total"]["category"] * 100, 2) . "%"; ?></td>
+	<td><?php echo round($sum["first_attempt"]["map"] / $sum["total"]["map"] * 100, 2) . "%"; ?></td>
+	<td><?php echo round($sum["avg_attempt"]["category"] / $sum["count"], 1); ?></td>
+	<td><?php echo round($sum["avg_attempt"]["map"] / $sum["count"], 1); ?></td>
+	<td><?php echo round($sum["time_spent"]["category"] / $sum["count"] / 1000, 0); ?></td>
+	<td><?php echo round($sum["time_spent"]["map"] / $sum["count"] / 1000, 0); ?></td>
+</tr>
 					</tbody>
         </table>
 
