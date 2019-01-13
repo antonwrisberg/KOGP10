@@ -67,9 +67,9 @@
 	},
 	{
 		"id": 11,
-		"name": "LoopPay",
+		"name": "Samsung Pay",
 		"description": "Den säkra mobila plånboken. Lämna bankkorten hemma och betala med telefonen!",
-		"image": "assets/img/looppay.jpg"
+		"image": "assets/img/samsung-pay.jpg"
 	},
 	{
 		"id": 12,
