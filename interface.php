@@ -22,7 +22,6 @@
 		<div class="progress"></div>
 		<div class="container">
 			<div>
-				<h1>Hitta rätt kategori/karta för tjänsten!</h1>
 				<img class="app-image" src="">
 				<h1 class="app-name"></h1>
 				<p class="app-description"></p>
