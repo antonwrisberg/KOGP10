@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<title>Smarta Kartor prototyp</title>
+		<title>Hitta tjänsten</title>
 		<meta charset="utf-8" />
 	</head>
 	<body>
@@ -15,8 +15,8 @@
 			<h1>Laddar in nästa tjänst…</h1>
 		</div>
 		<div class="overlay hidden" id="overlay-info">
-		<h2>Instruktioner: </h2>
-		<p>Detta testet går ut på att hitta vilka kategorier som hör ihop med vilka tjänster. När testet startar kommer du att få en tjänst och får sedan i uppgift att klicka på vilken kategori som denna tjänst tillhör. I en del av testet kommer kategorierna stå i textform och ha olika teman så som Underhållning eller Hälsa. I den andra delen av testet kommer kategorierna ej vara i text eller beröra något tema. Du kommer istället bli presenterad ett antal kartor som föreställer olika platser av olika storlekar så som en planritning av ett hem eller en karta över världen. Din uppgift blir då att fundera i linje med “Var hör denna tjänsten hemma”? Sedan ska du välja den karta som du tycker bäst passar ihop med den tjänsten som du har givits.</P>
+		<h2>Instruktionener</h2>
+		<p>I det här testet kommer du få para ihop tjänster med kategorier. En uppsättning tjänster kommer presenteras för dig. Din uppgift är att för varje tjänst klicka på den kategori där du tycker tjänster hör hemma. Testet består av två delar. I den första delen av testet kommer kategorierna bestå av namn, t.ex. 'underhållning' eller 'hälsa'. I den andra delen av testet kommer kategorierna bestå av kartor. Då ska du istället välja den karta du tycker passar bäst för tjänsten. Välj den kategori eller karta du tycker känns bäst. Vilken del av testet du börjar med är slumpmässigt. Testet går inte på tid. Lycka till!</p>
 			<p><a href="#" class="close">(close)</a></p>
 		</div>
 		<div class="container">
