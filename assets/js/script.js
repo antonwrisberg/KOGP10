@@ -17,6 +17,17 @@ $(document).ready(function() {
 		$('button').removeClass('right').removeClass('wrong');
 		attempt = 0;
 
+		if (exclude.length >= $.urlParam('length')) {
+			if ($.urlParam('cycle') == 'initial') {
+				window.location.href = 'interface.php?session_id=' + $.urlParam('session_id') + '&length=' + $.urlParam('length') + '&version=' + ($.urlParam('version') == 'category' ? 'map' : 'category');
+				//console.log("I want to redirect you!");
+				return;
+			} else {
+				window.location.href = 'success.php?session_id=' + $.urlParam('session_id');
+				return;
+			}
+		}
+
 		$.get({
 			url: 'api.php',
 			data: {
@@ -40,10 +51,12 @@ $(document).ready(function() {
 			} else if (data.error == 'no more apps') {
 				console.log(data.error);
 				if ($.urlParam('cycle') == 'initial') {
-					window.location.href = 'interface.php?session_id=' + $.urlParam('session_id') + '&version=' + ($.urlParam('version') == 'category' ? 'map' : 'category');
+					window.location.href = 'interface.php?session_id=' + $.urlParam('session_id') + '&length=' + $.urlParam('length') + '&version=' + ($.urlParam('version') == 'category' ? 'map' : 'category');
 					//console.log("I want to redirect you!");
+					return;
 				} else {
 					window.location.href = 'success.php?session_id=' + $.urlParam('session_id');
+					return;
 				}
 			}
 		});
@@ -74,7 +87,7 @@ $(document).ready(function() {
 
 		if ($(this).data('targetId') == correctTargetId) {
 			exclude.push(appId);
-			window.history.pushState("object or string", "Title", '?session_id=' + $.urlParam('session_id') + '&version=' + $.urlParam('version') + '&cycle=' + $.urlParam('cycle') + '&exclude=' + exclude.join());
+			window.history.pushState("object or string", "Title", '?session_id=' + $.urlParam('session_id') + '&length=' + $.urlParam('length') + '&version=' + $.urlParam('version') + '&cycle=' + $.urlParam('cycle') + '&exclude=' + exclude.join());
 
 			$(this).addClass('right');
 
