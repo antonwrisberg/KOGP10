@@ -135,9 +135,8 @@ button img {
 	left: 0;
 	right: 0;
 	z-index: 9;
-	background: rgba(0,0,0,.75);
+	background: rgba(255,255,255,.90);
 	padding: 200px 15% 0;
-	color: white;
 }
 
 .hidden {
@@ -150,4 +149,8 @@ button img {
 	height: 3px;
 	width: 100%;
 	background: blue;
+}
+
+.info {
+	font-size: 1.5em;
 }

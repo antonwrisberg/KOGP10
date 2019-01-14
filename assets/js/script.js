@@ -92,8 +92,8 @@ $(document).ready(function() {
 
 			$(this).addClass('right');
 
-			$('#overlay-correct').removeClass('hidden');
-			setTimeout(initiate, 1000);
+//		$('#overlay-correct').removeClass('hidden');
+			setTimeout(initiate, 800);
 		} else {
 			$(this).addClass('wrong');
 
