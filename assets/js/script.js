@@ -16,7 +16,7 @@ $(document).ready(function() {
 		$('#overlay-correct').addClass('hidden');
 		$('button').removeClass('right').removeClass('wrong');
 		attempt = 0;
-		$('.process').css({'right': (100 - Math.round(exclude.length / $.urlParam('length')  * 100)) + '%'});
+		$('.progress').css({'right': (100 - Math.round(exclude.length / $.urlParam('length')  * 100)) + '%'});
 
 		if (exclude.length >= $.urlParam('length')) {
 			if ($.urlParam('cycle') == 'initial') {
