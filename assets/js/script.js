@@ -108,6 +108,7 @@ $(document).ready(function() {
 
 	$('.close').click(function(e) {
 		$('#overlay-info').addClass('hidden');
+		timeStart = new Date().getTime();
 	});
 
 	// Initiate
