@@ -19,6 +19,7 @@
 		<p>I det här testet kommer du få para ihop tjänster med kategorier. En uppsättning tjänster kommer presenteras för dig. Din uppgift är att för varje tjänst klicka på den kategori där du tycker tjänster hör hemma. Testet består av två delar. I den första delen av testet kommer kategorierna bestå av namn, t.ex. 'underhållning' eller 'hälsa'. I den andra delen av testet kommer kategorierna bestå av kartor. Då ska du istället välja den karta du tycker passar bäst för tjänsten. Välj den kategori eller karta du tycker känns bäst. Vilken del av testet du börjar med är slumpmässigt. Testet går inte på tid. Lycka till!</p>
 			<p><a href="#" class="close">(close)</a></p>
 		</div>
+		<div class="progress"></div>
 		<div class="container">
 			<div>
 				<h1>Hitta rätt kategori/karta för tjänsten!</h1>

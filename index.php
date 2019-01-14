@@ -10,8 +10,8 @@
 			<h1>Välkommen!</h1>
 			<h2>Introduktion</h2>
 			<p>I det här testet kommer du få para ihop tjänster med kategorier. En uppsättning tjänster kommer presenteras för dig. Din uppgift är att för varje tjänst klicka på den kategori där du tycker tjänster hör hemma. Testet består av två delar. I den första delen av testet kommer kategorierna bestå av namn, t.ex. 'underhållning' eller 'hälsa'. I den andra delen av testet kommer kategorierna bestå av kartor. Då ska du istället välja den karta du tycker passar bäst för tjänsten. Välj den kategori eller karta du tycker känns bäst. Vilken del av testet du börjar med är slumpmässigt. Testet går inte på tid. Lycka till!</p>
-			<a href="interface.php?session_id=<?php echo uniqid(); ?>&length=5&version=<?php echo (rand(0,1) == 1 ? "category" : "map"); ?>&cycle=initial"><button>Starta testst (kort)</button></a>
-			<a href="interface.php?session_id=<?php echo uniqid(); ?>&length=20&version=<?php echo (rand(0,1) == 1 ? "category" : "map"); ?>&cycle=initial"><button>Starta testst (lang)</button></a>
+			<p><a id="start-button" href="interface.php?session_id=<?php echo uniqid(); ?>&length=5&version=<?php echo (rand(0,1) == 1 ? "category" : "map"); ?>&cycle=initial">Starta testet (kort)</a></p>
+			<p><a id="start-button" href="interface.php?session_id=<?php echo uniqid(); ?>&length=20&version=<?php echo (rand(0,1) == 1 ? "category" : "map"); ?>&cycle=initial">Starta testet (lång)</a></p>
 		</div>
 	</body>
 </html>
