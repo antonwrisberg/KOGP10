@@ -118,24 +118,28 @@ foreach ($app_list as $app) :
 	 WHERE `app_id` = '" . mysqli_real_escape_string($link, $app["id"]) . "'
 			&& `is_correct` = 1
 			&& `attempt` = 1
+			&& `is_training` <> 1
 	 GROUP BY `target_type`
 UNION
   SELECT 'total' as 'count_type', COUNT(`id`) as 'count', `target_type`
 		FROM `lucs_fu_entries`
 	 WHERE `app_id` = '" . mysqli_real_escape_string($link, $app["id"]) . "'
 			&& `is_correct` = 1
+			&& `is_training` <> 1
 	 GROUP BY `target_type`
 UNION
   SELECT 'avg_attempt' as 'count_type', ROUND(AVG(`attempt`), 1) as 'count', `target_type`
 		FROM `lucs_fu_entries`
 	 WHERE `app_id` = '" . mysqli_real_escape_string($link, $app["id"]) . "'
 			&& `is_correct` = 1
+			&& `is_training` <> 1
 	 GROUP BY `target_type`
 UNION
   SELECT 'time_spent' as 'count_type', ROUND(AVG(`time_spent`), 1) as 'count', `target_type`
 		FROM `lucs_fu_entries`
 	 WHERE `app_id` = '" . mysqli_real_escape_string($link, $app["id"]) . "'
       && `is_correct` = 1
+			&& `is_training` <> 1
 	 GROUP BY `target_type`
 	");
 

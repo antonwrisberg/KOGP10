@@ -24,7 +24,7 @@ $(document).ready(function() {
 				//console.log("I want to redirect you!");
 				return;
 			} else {
-				window.location.href = 'success.php?session_id=' + $.urlParam('session_id');
+				window.location.href = 'results.php?session_id=' + $.urlParam('session_id');
 				return;
 			}
 		}
@@ -56,7 +56,7 @@ $(document).ready(function() {
 					//console.log("I want to redirect you!");
 					return;
 				} else {
-					window.location.href = 'success.php?session_id=' + $.urlParam('session_id');
+					window.location.href = 'results.php?session_id=' + $.urlParam('session_id');
 					return;
 				}
 			}
