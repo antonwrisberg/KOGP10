@@ -104,11 +104,7 @@ button {
 
 button:hover {
 	cursor: pointer;
-<<<<<<< HEAD
 	background: rgb(0, 72, 120);
-=======
-	background: rgb(0, 82, 135);
->>>>>>> 43e89686be3b9a14f2e3e8d55c16c1345f65aae8
 }
 
 button img {
