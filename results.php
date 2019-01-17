@@ -236,6 +236,9 @@ foreach ($stats as $target_type => $records) :
 endforeach;
 ?>
 
+<br />
+<br />
+<h1>Lärandeeffekt:</h1>
 			<div id="chartContainer" style="height: 370px; width: 100%;"></div>
 
 		<script
