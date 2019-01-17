@@ -194,6 +194,50 @@ UNION
 					</tbody>
         </table>
 
+<?php
+
+$result = mysqli_query($link, "
+SELECT `session_id`, `timestamp`, `time_spent`, `target_type`
+	FROM `lucs_fu_entries`
+ WHERE `is_correct` = 1
+    && `is_training` <> 1
+ ORDER
+ 		BY `session_id`, `timestamp`
+");
+
+if ($result && $result->num_rows > 0) :
+
+	$result_array = array();
+
+	while($data = $result->fetch_array()) {
+		$result_array[$data['session_id']][$data['target_type']][] = $data['time_spent']; //array($data['timestamp'], $data['time_spent']);
+	}
+endif;
+
+$stats = array();
+
+foreach($result_array as $session_id) :
+	foreach ($session_id as $target_type => $records) :
+		foreach ($records as $index => $value) :
+			$stats[$target_type][$index]['count'] ++;
+			$stats[$target_type][$index]['sum'] += $value;
+		endforeach;
+	endforeach;
+endforeach;
+
+$data_points = array();
+
+foreach ($stats as $target_type => $records) :
+	foreach ($records as $index => $values) :
+		if ($index < 7) :
+			$data_points[$target_type][] = array("label" => ($index + 1), "y" => round(($values["sum"] / $values["count"]) / 1000, 2));
+		endif;
+	endforeach;
+endforeach;
+?>
+
+			<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+
 		<script
 		  src="https://code.jquery.com/jquery-3.3.1.min.js"
 		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -207,6 +251,36 @@ $(document).ready(function(){
 		info: false
 	});
 });
+		</script>
+		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+		<script>
+		window.onload = function () {
+
+		var chart = new CanvasJS.Chart("chartContainer", {
+			animationEnabled: true,
+			exportEnabled: true,
+			theme: "light1", // "light1", "light2", "dark1", "dark2"
+			data: [{
+				type: "column",
+				name: "Kartor",
+				showInLegend: true,
+				dataPoints: <?php echo json_encode($data_points["map"], JSON_NUMERIC_CHECK); ?>
+			},{
+				type: "column",
+				name: "Kategorier",
+				showInLegend: true,
+				dataPoints: <?php echo json_encode($data_points["category"], JSON_NUMERIC_CHECK); ?>
+			}],
+			axisX:{
+				title: "Testnummer"
+			},
+			axisY:{
+				title: "Tid för rätt (s)"
+			}
+		});
+		chart.render();
+
+		}
 		</script>
 	</body>
 </html>
