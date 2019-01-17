@@ -68,6 +68,8 @@
 	<p>(… or something else went wrong?!)</p>
 <?php endif; ?>
 
+<p><a class="start-button" href="index.php">Ny testperson</a></p>
+
 <h1>Generell statistik för testet:</h1>
         <table class="bigtable">
 					<thead>
